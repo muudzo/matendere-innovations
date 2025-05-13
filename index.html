@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matendere Holdings - 2030 Vision</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white bg-opacity-90 shadow-md z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-3">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <div class="text-2xl font-bold text-green-800">MATENDERE</div>
+          <span class="ml-2 text-sm font-semibold text-gray-500">HOLDINGS</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#vision" class="text-gray-800 hover:text-green-700 transition">Our Vision</a>
+          <a href="#pillars" class="text-gray-800 hover:text-green-700 transition">Strategic Pillars</a>
+          <a href="#impact" class="text-gray-800 hover:text-green-700 transition">Impact</a>
+          <a href="#roadmap" class="text-gray-800 hover:text-green-700 transition">Roadmap</a>
+          <a href="#contact" class="text-gray-800 hover:text-green-700 transition">Contact</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-6 py-4 space-y-3">
+        <a href="#vision" class="block text-gray-800 hover:text-green-700 transition">Our Vision</a>
+        <a href="#pillars" class="block text-gray-800 hover:text-green-700 transition">Strategic Pillars</a>
+        <a href="#impact" class="block text-gray-800 hover:text-green-700 transition">Impact</a>
+        <a href="#roadmap" class="block text-gray-800 hover:text-green-700 transition">Roadmap</a>
+        <a href="#contact" class="block text-gray-800 hover:text-green-700 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden bg-cover bg-center" style="background-image: url('/api/placeholder/1920/1080')">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="container mx-auto px-6 z-10 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 opacity-0" id="hero-title">Menabily Estate</h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto opacity-0" id="hero-subtitle">Transforming the future of Zimbabwe's agriculture through innovation, sustainability, and diversification</p>
+      <div class="opacity-0" id="hero-cta">
+        <a href="#pillars" class="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-lg inline-block transition shadow-lg mr-4">Explore Our Vision</a>
+        <a href="#contact" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg inline-block hover:bg-white hover:text-green-800 transition">Connect With Us</a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-0 right-0 text-center">
+      <a href="#vision" class="text-white animate-bounce inline-block">
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section id="vision" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Our 2030 Vision</h2>
+          <p class="text-gray-700 mb-6 leading-relaxed">Transforming Menabily Estate into a multi-asset wealth engine by integrating six strategic pillars that leverage Zimbabwe's unique climate, land resources, and evolving regulatory support.</p>
+          <p class="text-gray-700 mb-6 leading-relaxed">Each pillar is designed to tap into premium global markets, creating a diversified portfolio that significantly outpaces traditional agricultural returns.</p>
+          <div class="flex items-center mt-10">
+            <div class="h-1 w-16 bg-green-700 mr-3"></div>
+            <span class="text-gray-500 text-sm uppercase tracking-wider">Multiply Returns • Sustainable Growth • Global Markets</span>
+          </div>
+        </div>
+        <div class="md:w-1/2 relative">
+          <div class="bg-green-100 rounded-lg p-8 md:ml-10 relative z-10">
+            <h3 class="text-2xl font-bold text-green-800 mb-4">Key Strategic Advantage</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="mr-3 mt-1 text-green-700"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <h4 class="font-bold text-gray-800">Diversified Revenue Streams</h4>
+                  <p class="text-gray-600">Multiple income sources reduce risk and enhance stability</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-3 mt-1 text-green-700"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <h4 class="font-bold text-gray-800">Global Market Access</h4>
+                  <p class="text-gray-600">Direct export pathways to premium international markets</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-3 mt-1 text-green-700"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <h4 class="font-bold text-gray-800">Sustainable Practices</h4>
+                  <p class="text-gray-600">Environmental stewardship creating additional value</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-3 mt-1 text-green-700"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <h4 class="font-bold text-gray-800">Community Integration</h4>
+                  <p class="text-gray-600">Partnerships that strengthen local economies</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-green-700 rounded-full opacity-10 z-0"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Pillars Section -->
+  <section id="pillars" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Six Strategic Pillars</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Tap on each pillar to explore the strategy, implementation, and expected returns.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Pillar 1 - Agritourism -->
+        <div class="pillar-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition hover:-translate-y-2 hover:shadow-xl">
+          <div class="relative h-48 bg-cover bg-center" style="background-image: url('/api/placeholder/600/400')">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white">Agritourism Expansion</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">Sustainable agritourism farms in Zimbabwe have demonstrated meaningful revenue uplift when accommodation and experiential tours are added to core farming activities.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 font-medium">Explore Strategy</span>
+              <i class="fas fa-arrow-right text-green-700"></i>
+            </div>
+          </div>
+          <div class="pillar-details hidden p-6 bg-gray-50 border-t">
+            <h4 class="font-bold text-gray-800 mb-2">Implementation:</h4>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Convert 5–10 ha into eco-luxe "glamping" tents or cabins</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Offer "field-to-fork" tours with farm-fresh dining</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Host workshops commanding €50–100/day premiums</p>
+              </li>
+            </ul>
+            <h4 class="font-bold text-gray-800 mb-2">Expected Returns:</h4>
+            <div class="flex items-center">
+              <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                <span class="text-green-700 font-bold">70%+</span>
+              </div>
+              <p class="text-gray-600">Occupancy rates seen at pilot sites in Manicaland</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2 - Horticulture Exports -->
+        <div class="pillar-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition hover:-translate-y-2 hover:shadow-xl">
+          <div class="relative h-48 bg-cover bg-center" style="background-image: url('/api/placeholder/600/400')">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white">High-Value Horticulture Exports</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">China's phytosanitary protocol for Zimbabwean avocados opens one of the world's largest markets; macadamias and other nuts follow suit.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 font-medium">Explore Strategy</span>
+              <i class="fas fa-arrow-right text-green-700"></i>
+            </div>
+          </div>
+          <div class="pillar-details hidden p-6 bg-gray-50 border-t">
+            <h4 class="font-bold text-gray-800 mb-2">Implementation:</h4>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Dedicate 50–100 ha to Hass avocado and macadamia blocks</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Partner with Chinese investors on mechanised wash-pack-freeze lines</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Leverage 2024 protocol to ship direct to Shanghai/Guangzhou</p>
+              </li>
+            </ul>
+            <h4 class="font-bold text-gray-800 mb-2">Expected Returns:</h4>
+            <div class="flex items-center">
+              <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                <span class="text-green-700 font-bold">$1.20/kg</span>
+              </div>
+              <p class="text-gray-600">Secured offtake price for Hass avocados</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3 - Boutique Wine -->
+        <div class="pillar-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition hover:-translate-y-2 hover:shadow-xl">
+          <div class="relative h-48 bg-cover bg-center" style="background-image: url('/api/placeholder/600/400')">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white">Boutique Wine Production</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">Globally, fine-wine investment indices have compounded at double-digit rates over decades, while scarce, terroir-driven labels command premium prices.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 font-medium">Explore Strategy</span>
+              <i class="fas fa-arrow-right text-green-700"></i>
+            </div>
+          </div>
+          <div class="pillar-details hidden p-6 bg-gray-50 border-t">
+            <h4 class="font-bold text-gray-800 mb-2">Implementation:</h4>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Position Menabily labels as small-batch, vineyard-specific releases</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Bundle cellar-door tastings with resort stays</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Cellar 5,000 bottles for 5–10 years to capture long-term price appreciation</p>
+              </li>
+            </ul>
+            <h4 class="font-bold text-gray-800 mb-2">Expected Returns:</h4>
+            <div class="flex items-center">
+              <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                <span class="text-green-700 font-bold">$25-50</span>
+              </div>
+              <p class="text-gray-600">Price per bottle for premium labels</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4 - Carbon Credits -->
+        <div class="pillar-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition hover:-translate-y-2 hover:shadow-xl">
+          <div class="relative h-48 bg-cover bg-center" style="background-image: url('/api/placeholder/600/400')">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white">Carbon-Credit Monetization</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">Zimbabwe's new regulatory framework and project pipeline highlight rapid growth in carbon markets, with 519,590 credits issued from March to August 2024.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 font-medium">Explore Strategy</span>
+              <i class="fas fa-arrow-right text-green-700"></i>
+            </div>
+          </div>
+          <div class="pillar-details hidden p-6 bg-gray-50 border-t">
+            <h4 class="font-bold text-gray-800 mb-2">Implementation:</h4>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Implement agroforestry, rotational grazing, and biochar systems</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Register under Zimbabwe's 2023 Carbon Credits Trading Regulations</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Engage community-focused projects to maximize social co-benefits</p>
+              </li>
+            </ul>
+            <h4 class="font-bold text-gray-800 mb-2">Expected Returns:</h4>
+            <div class="flex items-center">
+              <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                <span class="text-green-700 font-bold">$5-10</span>
+              </div>
+              <p class="text-gray-600">Per tCO₂ for Verified Carbon Standard credits</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 5 - Renewable Energy -->
+        <div class="pillar-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition hover:-translate-y-2 hover:shadow-xl">
+          <div class="relative h-48 bg-cover bg-center" style="background-image: url('/api/placeholder/600/400')">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white">Renewable-Energy Land Leasing</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">Independent Power Producers seek large, flat tracts for solar farms; the 90 MW Chiredzi project demonstrates local IPP appetite.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 font-medium">Explore Strategy</span>
+              <i class="fas fa-arrow-right text-green-700"></i>
+            </div>
+          </div>
+          <div class="pillar-details hidden p-6 bg-gray-50 border-t">
+            <h4 class="font-bold text-gray-800 mb-2">Implementation:</h4>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Negotiate long-term (20–25 yr) leases for 50–100 ha parcels</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Structure deals with clear PPA terms, enabling project financing</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Explore rooftop-solar lease schemes in Harare</p>
+              </li>
+            </ul>
+            <h4 class="font-bold text-gray-800 mb-2">Expected Returns:</h4>
+            <div class="flex items-center">
+              <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                <span class="text-green-700 font-bold">Premium</span>
+              </div>
+              <p class="text-gray-600">Rates above A2-farm rental baseline (US $3/ha/yr)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 6 - Wildlife Ranching -->
+        <div class="pillar-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition hover:-translate-y-2 hover:shadow-xl">
+          <div class="relative h-48 bg-cover bg-center" style="background-image: url('/api/placeholder/600/400')">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white">Wildlife & Game Ranching</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4">Under CAMPFIRE-style community programs, safari-hunting and photographic safaris have generated US $20m in district revenues; private reserves yield US $4,000–6,000 per trophy hunt.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-green-700 font-medium">Explore Strategy</span>
+              <i class="fas fa-arrow-right text-green-700"></i>
+            </div>
+          </div>
+          <div class="pillar-details hidden p-6 bg-gray-50 border-t">
+            <h4 class="font-bold text-gray-800 mb-2">Implementation:</h4>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Allocate 200–300 ha to fenced wildlife reserves</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Partner with local communities for joint-venture conservancies</p>
+              </li>
+              <li class="flex items-start">
+                <div class="mr-2 mt-1 text-green-700"><i class="fas fa-caret-right"></i></div>
+                <p class="text-gray-600">Develop a conservation-branded lodge for cross-selling</p>
+              </li>
+            </ul>
+            <h4 class="font-bold text-gray-800 mb-2">Expected Returns:</h4>
+            <div class="flex items-center">
+              <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                <span class="text-green-700 font-bold">$5,000+</span>
+              </div>
+              <p class="text-gray-600">Per trophy hunt, with $500/night photo-safaris</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Menabily Estate Overview</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Explore the estate layout and see how our strategic pillars will transform the landscape.</p>
+      </div>
+
+      <div class="relative bg-green-50 rounded-lg overflow-hidden shadow-lg h-96">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="text-center">
+            <img src="/api/placeholder/800/600" alt="Interactive Map" class="mx-auto mb-6 rounded-lg shadow-md"/>
+            <p class="text-gray-600">Click on the sections to explore the estate plan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-gray-800 mb-2">Total Land Area</h3>
+          <div class="flex items-center">
+            <div class="text-4xl font-bold text-green-700 mr-2">500+ ha</div>
+            <span class="text-gray-500">Strategically allocated</span>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-gray-800 mb-2">Land Allocation</h3>
+          <div class="h-32">
+            <canvas id="landAllocationChart"></canvas>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-gray-800 mb-2">Revenue Streams</h3>
+          <div class="h-32">
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Projected Impact</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Our integrated approach delivers value across multiple dimensions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-2xl text-green-700"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Community Impact</h3>
+          <p class="text-gray-600 mb-4">Creating sustainable jobs and economic opportunities for local communities.</p>
+          <div class="text-3xl font-bold text-green-700 mb-2 impact-counter" data-target="350">0</div>
+          <p class="text-gray-500">Local jobs created</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-leaf text-2xl text-green-700"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Environmental Benefit</h3>
+          <p class="text-gray-600 mb-4">Reducing carbon footprint while preserving biodiversity and natural resources.</p>
+          <div class="text-3xl font-bold text-green-700 mb-2 impact-counter" data-target="50000">0</div>
+          <p class="text-gray-500">Tons of CO₂ sequestered</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-globe text-2xl text-green-700"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Global Reach</h3>
+          <p class="text-gray-600 mb-4">Exporting Zimbabwe's finest products to premium markets worldwide.</p>
+          <div class="text-3xl font-bold text-green-700 mb-2 impact-counter" data-target="12">0</div>
+          <p class="text-gray-500">Countries served</p>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-6">Annual Growth Projection</h3>
+        <div class="h-64">
+          <canvas id="growthChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Implementation Roadmap</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Our strategic execution plan from 2025 to 2030.</p>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-200"></div>
+        
+        <!-- Timeline items -->
+        <div class="relative z-10">
+          <!-- Phase 1 -->
+          <div class="timeline-item mb-16 flex justify-between items-center">
+            <div class="w-5/12 pr-8 text-right">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Phase 1: Foundation</h3>
+              <p class="text-gray-600 mb-2">2025-2026</p>
+              <div class="bg-green-50 p-4 rounded-lg inline-block">
+                <ul class="space-y-2 text-left">
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Commission feasibility studies & EIAs</p>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Launch pilot projects (10 ha avocado, 2 ha agroforest)</p>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Establish initial strategic partnerships</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-marker w-2/12 flex justify-center">
+              <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center border-4 border-white">
+                <span class="text-white font-bold">1</span>
+              </div>
+            </div>
+            <div class="w-5/12"></div>
+          </div>
+          
+          <!-- Phase 2 -->
+          <div class="timeline-item mb-16 flex justify-between items-center">
+            <div class="w-5/12"></div>
+            <div class="timeline-marker w-2/12 flex justify-center">
+              <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center border-4 border-white">
+                <span class="text-white font-bold">2</span>
+              </div>
+            </div>
+            <div class="w-5/12 pl-8">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Phase 2: Expansion</h3>
+              <p class="text-gray-600 mb-2">2026-2028</p>
+              <div class="bg-green-50 p-4 rounded-lg inline-block">
+                <ul class="space-y-2 text-left">
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Scale up avocado & macadamia production</p>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Establish eco-luxe accommodation & initial tourism facilities</p>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Finalize carbon credit registration & begin solar leasing</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Phase 3 -->
+          <div class="timeline-item mb-16 flex justify-between items-center">
+            <div class="w-5/12 pr-8 text-right">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Phase 3: Integration</h3>
+              <p class="text-gray-600 mb-2">2028-2029</p>
+              <div class="bg-green-50 p-4 rounded-lg inline-block">
+                <ul class="space-y-2 text-left">
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Develop wildlife reserve & conservation lodge</p>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Launch boutique wine production & cellar operations</p>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Integrate all experiences into unified brand offerings</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-marker w-2/12 flex justify-center">
+              <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center border-4 border-white">
+                <span class="text-white font-bold">3</span>
+              </div>
+            </div>
+            <div class="w-5/12"></div>
+          </div>
+          
+          <!-- Phase 4 -->
+          <div class="timeline-item flex justify-between items-center">
+            <div class="w-5/12"></div>
+            <div class="timeline-marker w-2/12 flex justify-center">
+              <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center border-4 border-white">
+                <span class="text-white font-bold">4</span>
+              </div>
+            </div>
+            <div class="w-5/12 pl-8">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Phase 4: Optimization</h3>
+              <p class="text-gray-600 mb-2">2029-2030</p>
+              <div class="bg-green-50 p-4 rounded-lg inline-block">
+                <ul class="space-y-2 text-left">
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Expand export markets to additional countries</p>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Scale community partnerships & social impact initiatives</p>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="mr-2 mt-1 text-green-700"><i class="fas fa-circle text-xs"></i></div>
+                    <p class="text-gray-600">Maximize efficiency across all revenue streams</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investor Section -->
+  <section class="py-20 bg-green-800 text-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h2 class="text-3xl font-bold mb-6">Investment Opportunity</h2>
+          <p class="mb-6 leading-relaxed">Become part of Zimbabwe's agricultural transformation. Our multi-asset approach delivers exceptional returns while creating positive social and environmental impact.</p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <div class="mr-3 mt-1"><i class="fas fa-check-circle text-green-300"></i></div>
+              <div>
+                <h4 class="font-bold">Diversified Risk Profile</h4>
+                <p class="text-green-100">Multiple revenue streams ensure stability across market fluctuations</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <div class="mr-3 mt-1"><i class="fas fa-check-circle text-green-300"></i></div>
+              <div>
+                <h4 class="font-bold">Premium Market Access</h4>
+                <p class="text-green-100">Established pathways to high-value global markets</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <div class="mr-3 mt-1"><i class="fas fa-check-circle text-green-300"></i></div>
+              <div>
+                <h4 class="font-bold">ESG Compliance</h4>
+                <p class="text-green-100">Built-in sustainability and community integration</p>
+              </div>
+            </li>
+          </ul>
+          <a href="#contact" class="bg-white text-green-800 font-bold py-3 px-8 rounded-lg inline-block hover:bg-green-100 transition">Connect With Our Team</a>
+        </div>
+        <div class="md:w-1/2 md:pl-10">
+          <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+            <h3 class="text-2xl font-bold mb-6 text-center">Investment Tiers</h3>
+            <div class="space-y-6">
+              <div class="p-6 bg-white bg-opacity-10 rounded-lg">
+                <div class="flex justify-between items-center mb-4">
+                  <h4 class="text-xl font-bold">Seed Tier</h4>
+                  <span class="bg-green-700 text-white text-sm py-1 px-3 rounded-full">$250K - $500K</span>
+                </div>
+                <p class="mb-4 text-green-100">Early-stage participation in foundation-building phase with higher growth potential.</p>
+                <div class="flex items-center justify-between text-sm">
+                  <span>Expected ROI:</span>
+                  <span class="font-bold">22-25% annual</span>
+                </div>
+              </div>
+              
+              <div class="p-6 bg-white bg-opacity-10 rounded-lg">
+                <div class="flex justify-between items-center mb-4">
+                  <h4 class="text-xl font-bold">Growth Tier</h4>
+                  <span class="bg-green-700 text-white text-sm py-1 px-3 rounded-full">$500K - $2M</span>
+                </div>
+                <p class="mb-4 text-green-100">Strategic expansion capital for scaling operations and infrastructure development.</p>
+                <div class="flex items-center justify-between text-sm">
+                  <span>Expected ROI:</span>
+                  <span class="font-bold">18-22% annual</span>
+                </div>
+              </div>
+              
+              <div class="p-6 bg-white bg-opacity-10 rounded-lg">
+                <div class="flex justify-between items-center mb-4">
+                  <h4 class="text-xl font-bold">Partnership Tier</h4>
+                  <span class="bg-green-700 text-white text-sm py-1 px-3 rounded-full">$2M+</span>
+                </div>
+                <p class="mb-4 text-green-100">Strategic partnership with significant equity position and board representation.</p>
+                <div class="flex items-center justify-between text-sm">
+                  <span>Expected ROI:</span>
+                  <span class="font-bold">15-18% annual</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Q&A Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Get answers to common questions about our 2030 vision and investment opportunity.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="faq-question p-6 flex justify-between items-center cursor-pointer">
+            <h3 class="font-bold text-gray-800">What makes Menabily Estate unique compared to other agricultural investments?</h3>
+            <i class="fas fa-plus text-green-700 transition-transform"></i>
+          </div>
+          <div class="faq-answer p-6 pt-0 border-t hidden">
+            <p class="text-gray-600">Menabily Estate stands out through its integrated multi-asset approach that combines traditional agriculture with tourism, renewable energy, conservation, and carbon markets. This diversification creates multiple revenue streams, reduces risk, and positions us to capture value from premium global markets while maintaining a strong sustainability focus.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="faq-question p-6 flex justify-between items-center cursor-pointer">
+            <h3 class="font-bold text-gray-800">How do you manage risks associated with agriculture in Zimbabwe?</h3>
+            <i class="fas fa-plus text-green-700 transition-transform"></i>
+          </div>
+          <div class="faq-answer p-6 pt-0 border-t hidden">
+            <p class="text-gray-600">Our risk management strategy has multiple layers: First, our diversified revenue streams ensure we're not dependent on any single crop or market. Second, we've secured direct export channels to premium markets in Asia and Europe. Third, we've built strong relationships with local communities and government stakeholders. Finally, we utilize modern agricultural techniques, including climate-smart practices, to mitigate environmental risks.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="faq-question p-6 flex justify-between items-center cursor-pointer">
+            <h3 class="font-bold text-gray-800">What is the timeline for expected returns on investment?</h3>
+            <i class="fas fa-plus text-green-700 transition-transform"></i>
+          </div>
+          <div class="faq-answer p-6 pt-0 border-t hidden">
+            <p class="text-gray-600">Different revenue streams have different maturation periods. Solar land leasing and agritourism can begin generating returns within 1-2 years. Horticulture exports typically yield returns in 3-4 years as orchards mature. Carbon credits and wildlife tourism begin meaningful returns in years 2-3. Wine production is a longer-term asset with significant appreciation potential over 5-10 years. Our phased implementation allows for early returns while building long-term value.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="faq-question p-6 flex justify-between items-center cursor-pointer">
+            <h3 class="font-bold text-gray-800">How do you engage with local communities?</h3>
+            <i class="fas fa-plus text-green-700 transition-transform"></i>
+          </div>
+          <div class="faq-answer p-6 pt-0 border-t hidden">
+            <p class="text-gray-600">Community engagement is central to our model. We utilize contract farming arrangements with local smallholders, provide skills training and employment opportunities, and implement revenue-sharing mechanisms for tourism and conservation initiatives. Our carbon projects include significant social co-benefits, and we've established a community development fund that receives a percentage of all profits to invest in local education, healthcare, and infrastructure.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="faq-question p-6 flex justify-between items-center cursor-pointer">
+            <h3 class="font-bold text-gray-800">What are the minimum investment requirements?</h3>
+            <i class="fas fa-plus text-green-700 transition-transform"></i>
+          </div>
+          <div class="faq-answer p-6 pt-0 border-t hidden">
+            <p class="text-gray-600">Our investment tiers begin at $250,000 for the Seed Tier, which provides early participation in our foundation-building phase. The Growth Tier ranges from $500,000 to $2 million and focuses on strategic expansion. Our Partnership Tier at $2 million+ includes significant equity positions and board representation. We also offer tailored investment structures for institutional investors seeking specific ESG or impact targets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Connect With Us</h2>
+          <p class="text-gray-600 mb-8">Interested in learning more about our 2030 vision and investment opportunities? Reach out to our team for a detailed prospectus and to schedule a personal consultation.</p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="mr-4 mt-1 bg-green-100 rounded-full p-2">
+                <i class="fas fa-map-marker-alt text-green-700"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Our Location</h3>
+                <p class="text-gray-600">Menabily Estate, Chipinge District<br>Manicaland Province, Zimbabwe</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="mr-4 mt-1 bg-green-100 rounded-full p-2">
+                <i class="fas fa-envelope text-green-700"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Email Us</h3>
+                <p class="text-gray-600">investors@matendere.co.zw<br>info@matendere.co.zw</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="mr-4 mt-1 bg-green-100 rounded-full p-2">
+                <i class="fas fa-phone text-green-700"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Call Us</h3>
+                <p class="text-gray-600">+263 242 123 4567<br>+27 12 345 6789</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-10">
+            <h3 class="font-bold text-gray-800 mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center text-white hover:bg-green-800 transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center text-white hover:bg-green-800 transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center text-white hover:bg-green-800 transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center text-white hover:bg-green-800 transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">Request Information</h3>
+            <form>
+              <div class="mb-6">
+                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+              </div>
+              
+              <div class="mb-6">
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+              </div>
+              
+              <div class="mb-6">
+                <label for="company" class="block text-gray-700 font-medium mb-2">Company/Organization</label>
+                <input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+              </div>
+              
+              <div class="mb-6">
+                <label for="interest" class="block text-gray-700 font-medium mb-2">Investment Interest</label>
+                <select id="interest" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                  <option>Select investment tier</option>
+                  <option>Seed Tier ($250K - $500K)</option>
+                  <option>Growth Tier ($500K - $2M)</option>
+                  <option>Partnership Tier ($2M+)</option>
+                  <option>Custom arrangement</option>
+                </select>
+              </div>
+              
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+              </div>
+              
+              <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-6 rounded-lg transition shadow-lg">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="mb-6 md:mb-0">
+          <div class="flex items-center">
+            <div class="text-2xl font-bold text-white">MATENDERE</div>
+            <span class="ml-2 text-sm font-semibold text-gray-400">HOLDINGS</span>
+          </div>
+          <p class="mt-3 text-gray-400 max-w-md">Transforming Zimbabwe's agriculture through innovation, sustainability, and diversification.</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#vision" class="text-gray-400 hover:text-white transition">Our Vision</a></li>
+              <li><a href="#pillars" class="text-gray-400 hover:text-white transition">Strategic Pillars</a></li>
+              <li><a href="#impact" class="text-gray-400 hover:text-white transition">Impact</a></li>
+              <li><a href="#roadmap" class="text-gray-400 hover:text-white transition">Roadmap</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-bold mb-4">Resources</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-white transition">Investment Prospectus</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition">Market Research</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition">Sustainability Report</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition">Media Kit</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-bold mb-4">Legal</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white transition">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Matendere Holdings. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class=" justify-center mx-auto mb-6">
+            <i class="fas fa-dollar-sign text-2xl text-green-700"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Financial Returns</h3>
+          <p class="text-gray-600 mb-4">Significantly outpacing traditional agricultural returns through diversified revenue streams.</p>
+          <div class="text-3xl font-bold text-green-700 mb-2 impact-counter" data-target="215">0</div>
+          <p class="text-gray-500">% ROI by 2030</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center
