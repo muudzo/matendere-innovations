@@ -1,0 +1,102 @@
+/* Base styles with performance optimizations */
+:root {
+    --animate-duration: 0.5s;
+    --primary: #047857;
+    --primary-dark: #065f46;
+    --gray-light: #f3f4f6;
+    --gray-dark: #1f2937;
+}
+
+/* Optimize paint operations */
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    will-change: transform;
+}
+
+/* Minimal animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn var(--animate-duration) ease-out forwards;
+    will-change: transform, opacity;
+}
+
+/* Performance optimized hover states */
+.hover-transform {
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+
+.hover-transform:hover {
+    transform: translateY(-4px);
+}
+
+/* Optimize card transitions */
+.pillar-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform, box-shadow;
+}
+
+.pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Optimize mobile menu transitions */
+.mobile-menu {
+    transition: opacity 0.2s ease;
+    will-change: opacity;
+}
+
+/* Lazy loading images */
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+}
+
+/* Reduce paint operations for scroll animations */
+.scroll-animate {
+    will-change: transform, opacity;
+}
+
+/* Optimize touch targets for mobile */
+@media (max-width: 768px) {
+    .nav-link, .button {
+        min-height: 44px;
+        padding: 12px 16px;
+    }
+    
+    .pillar-card {
+        margin-bottom: 16px;
+    }
+}
+
+/* Print styles for better resource usage */
+@media print {
+    .animate-fade-in {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .nav-fixed {
+        position: static;
+    }
+} 
