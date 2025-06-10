@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+        .loading {
+            background-color: #f8f9fa;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <h2>Test Contact Form</h2>
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="2">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,}">
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+        </div>
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+    <div id="response"></div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const submitButton = document.getElementById('submitButton');
+        const responseDiv = document.getElementById('response');
+
+        function showResponse(message, isError = false) {
+            responseDiv.className = isError ? 'error' : 'success';
+            responseDiv.textContent = message;
+        }
+
+        function showLoading() {
+            responseDiv.className = 'loading';
+            responseDiv.textContent = 'Submitting...';
+            submitButton.disabled = true;
+        }
+
+        function hideLoading() {
+            submitButton.disabled = false;
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            showLoading();
+            
+            const formData = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                message: document.getElementById('message').value.trim()
+            };
+
+            try {
+                console.log('Sending request to:', 'http://localhost:5000/api/submit-form');
+                console.log('Request data:', formData);
+
+                const response = await fetch('http://localhost:5000/api/submit-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                console.log('Response status:', response.status);
+                const data = await response.json();
+                console.log('Response data:', data);
+                
+                if (response.ok) {
+                    showResponse('Form submitted successfully!\n\nResponse data:\n' + JSON.stringify(data, null, 2));
+                    form.reset();
+                } else {
+                    let errorMessage = `Error: ${data.message}`;
+                    if (data.errors) {
+                        errorMessage += '\n\nValidation errors:\n' + data.errors.join('\n');
+                    }
+                    showResponse(errorMessage, true);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showResponse('Error submitting form: ' + error.message + '\n\nPlease make sure the backend server is running on port 5000.', true);
+            } finally {
+                hideLoading();
+            }
+        });
+    </script>
+</body>
+</html> 
