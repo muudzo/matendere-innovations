@@ -111,10 +111,10 @@
             };
 
             try {
-                console.log('Sending request to:', 'http://localhost:5000/api/submit-form');
+                console.log('Sending request to:', 'http://localhost:5001/api/submit-form');
                 console.log('Request data:', formData);
 
-                const response = await fetch('http://localhost:5000/api/submit-form', {
+                const response = await fetch('http://localhost:5001/api/submit-form', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -138,7 +138,7 @@
                 }
             } catch (error) {
                 console.error('Error:', error);
-                showResponse('Error submitting form: ' + error.message + '\n\nPlease make sure the backend server is running on port 5000.', true);
+                showResponse('Error submitting form: ' + error.message + '\n\nPlease make sure the backend server is running on port 5001.', true);
             } finally {
                 hideLoading();
             }

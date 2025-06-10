@@ -782,6 +782,47 @@
               </div>
             </div>
           </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = '+263000000000'; // Optional: Add a hidden or visible phone field if needed
+      const message = document.getElementById('message').value.trim();
+      const interest = document.getElementById('interest').value;
+
+      try {
+        const response = await fetch('http://localhost:5001/api/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            message: `${interest ? `[Interest: ${interest}]\n` : ''}${message}`,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          alert('Thank you! Your message has been sent.');
+          form.reset();
+        } else {
+          alert(`Error: ${result.message}\n${result.errors?.join('\n') || ''}`);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again later.');
+      }
+    });
+  });
+</script>
 
           <div>
             <h3 class="text-xl font-bold text-gray-900 mb-4">Partnership Opportunities</h3>
